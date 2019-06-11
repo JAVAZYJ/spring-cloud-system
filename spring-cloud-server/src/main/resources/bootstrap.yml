@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-cloud-server #注册中心服务名
+
+server:
+  port: 8000 #注册中心端口号
+
+eureka: #Eureka 注册中心相关配置
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #是否将eureka自身作为应用注册到eureka注册中心
+    fetch-registry: false #是否把自己作为服务注册到其他服务注册中心
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #指向注册中心配置路径
+  server:
+    enable-self-preservation: false #关闭服务保护机制
+    eviction-interval-timer-in-ms: 30000 # 清理无效节点时间间隔（单位毫秒，默认是60*1000）

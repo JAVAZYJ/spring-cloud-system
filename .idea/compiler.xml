@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-client" />
+        <module name="spring-cloud-system" />
+        <module name="spring-cloud-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-cloud-client" target="1.8" />
+      <module name="spring-cloud-server" target="1.8" />
+      <module name="spring-cloud-system" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-cloud-client" options="-parameters" />
+      <module name="spring-cloud-server" options="-parameters" />
+      <module name="spring-cloud-system" options="-parameters" />
+    </option>
+  </component>
+</project>

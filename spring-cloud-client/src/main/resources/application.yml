@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-cloud-client #服务中心服务名
+
+server:
+  port: 8001 #服务中心端口号
+
+eureka: #Eureka 服务中心相关配置
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 20 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 30 # 如果现在超过了5秒的间隔（默认是90秒）
+  client:
+    register-with-eureka: true #是否将eureka自身作为应用注册到eureka注册中心
+    fetch-registry: true #是否把自己作为服务注册到其他服务注册中心
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka/  #指向注册中心配置路径
