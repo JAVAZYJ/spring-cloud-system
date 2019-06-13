@@ -39,8 +39,8 @@ public class Swagger2Config {
                 .title("SpringCloud网关接口文档")
                 .description("网关测试文档")
                 //服务条款网址
-                .termsOfServiceUrl("https://baidu.com")
-                .contact(new Contact("朱贻杰","http://localhost:8001/swagger-ui.html","18112855600@163.com"))
+                .termsOfServiceUrl("")
+                .contact(new Contact("朱贻杰","http://18112855600@163.com","18112855600@163.com"))
                 .license("Apache License Version 2.0")
                 .version("1.0")
                 .build();

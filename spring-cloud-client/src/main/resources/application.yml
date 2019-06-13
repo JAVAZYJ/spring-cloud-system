@@ -15,6 +15,7 @@ server:
 
 eureka: #Eureka 服务中心相关配置
   instance:
+    prefer-ip-address: true #没有这行你休想访问不同电脑的swagger接口
     hostname: localhost
     lease-renewal-interval-in-seconds: 20 # 设置心跳的时间间隔（默认是30秒）
     lease-expiration-duration-in-seconds: 30 # 如果现在超过了5秒的间隔（默认是90秒）

@@ -18,6 +18,7 @@ import java.util.List;
 @Component
 @Primary
 public class GatewaySwaggerResourcesProvider implements SwaggerResourcesProvider {
+
     private final RouteLocator routeLocator;
 
     public GatewaySwaggerResourcesProvider(RouteLocator routeLocator) {
