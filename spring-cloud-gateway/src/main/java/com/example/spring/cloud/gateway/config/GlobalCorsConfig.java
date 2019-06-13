@@ -8,9 +8,10 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * 处理跨域请求的过滤器
+ * @author YiJieZhu
  */
 @Configuration
-public class GlobalCorsConfig {
+public class GlobalCorsConfig{
     @Bean
     public CorsFilter corsFilter() {
         //1.添加CORS配置信息
