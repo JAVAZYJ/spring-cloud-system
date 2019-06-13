@@ -2,6 +2,7 @@ package com.example.spring.cloud.client.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,6 +16,7 @@ import java.io.Serializable;
  * @since 2019-06-13
  */
 @Data
+@TableName("user")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -36,6 +38,5 @@ public class User implements Serializable {
      */
     @TableField("password")
     private String password;
-
 
 }
