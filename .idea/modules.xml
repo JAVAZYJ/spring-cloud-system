@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-client/spring-cloud-client.iml" filepath="$PROJECT_DIR$/spring-cloud-client/spring-cloud-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign-api/spring-cloud-feign-api.iml" filepath="$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign-api/spring-cloud-feign-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign-app/spring-cloud-feign-app.iml" filepath="$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign-app/spring-cloud-feign-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-gateway/spring-cloud-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-gateway/spring-cloud-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-server/spring-cloud-server.iml" filepath="$PROJECT_DIR$/spring-cloud-server/spring-cloud-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-system.iml" filepath="$PROJECT_DIR$/spring-cloud-system.iml" />
     </modules>

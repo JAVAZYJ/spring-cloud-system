@@ -10,6 +10,7 @@
         <module name="spring-cloud-client" />
         <module name="spring-cloud-feign-app" />
         <module name="spring-cloud-server" />
+        <module name="spring-cloud-gateway" />
         <module name="spring-cloud-feign-api" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="spring-cloud-feign" target="1.8" />
       <module name="spring-cloud-feign-api" target="1.8" />
       <module name="spring-cloud-feign-app" target="1.8" />
+      <module name="spring-cloud-gateway" target="1.8" />
       <module name="spring-cloud-server" target="1.8" />
       <module name="spring-cloud-system" target="1.8" />
     </bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="spring-cloud-feign" options="-parameters" />
       <module name="spring-cloud-feign-api" options="-parameters" />
       <module name="spring-cloud-feign-app" options="-parameters" />
+      <module name="spring-cloud-gateway" options="-parameters" />
       <module name="spring-cloud-server" options="-parameters" />
       <module name="spring-cloud-system" options="-parameters" />
     </option>

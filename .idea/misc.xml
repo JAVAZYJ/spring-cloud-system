@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/spring-cloud-feign/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign-app/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign-api/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
