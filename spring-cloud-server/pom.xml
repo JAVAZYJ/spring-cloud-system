@@ -18,6 +18,29 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <dependencies>
+        <!-- Netflix Eureka依赖（服务发现和注册(Eureka);客户端负载均衡（Ribbon);断路由（Hystrix);路由（Zuul)） -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 引入spring cloud的依赖，不能少，主要用来管理Spring Cloud生态各组件的版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 添加spring-boot的maven插件，不能少，打jar包时得用 -->
     <build>
         <plugins>
             <plugin>

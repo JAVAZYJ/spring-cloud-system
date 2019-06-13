@@ -12,12 +12,74 @@
     <artifactId>spring-cloud-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-client</name>
+    <packaging>jar</packaging>
     <description>SpringCloud Eureka服务中心示例搭建</description>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
+    <dependencies>
+        <!-- MYSQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+        <!-- Netflix Eureka依赖（服务发现和注册(Eureka);客户端负载均衡（Ribbon);断路由（Hystrix);路由（Zuul)） -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+        <!-- OpenFeign 通过集成Ribbon或Eureka实现负载均衡的HTTP客户端;OpenFeign的标注@FeignClient和@EnableFeignClients -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+        <!-- jwt认证协议依赖 -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.0</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 引入spring cloud的依赖，不能少，主要用来管理Spring Cloud生态各组件的版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 添加spring-boot的maven插件，不能少，打jar包时得用 -->
     <build>
         <plugins>
             <plugin>
@@ -26,5 +88,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,17 +1,28 @@
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_cloud_system?serverTimezone=Shanghai&?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    hikari: #è¿æ¥æ± 
+      maximum-pool-size: 20 # è¿æ¥æ± æœ€å¤§è¿æ¥æ•°ï¼Œé»˜è®¤æ˜¯10
+      minimum-idle: 10 # æœ€å°ç©ºé—²è¿æ¥æ•°é‡
   application:
-    name: spring-cloud-client #·şÎñÖĞĞÄ·şÎñÃû
+    name: spring-cloud-client #æœåŠ¡ä¸­å¿ƒæœåŠ¡å
 
 server:
-  port: 8001 #·şÎñÖĞĞÄ¶Ë¿ÚºÅ
+  port: 8001 #æœåŠ¡ä¸­å¿ƒç«¯å£å·
 
-eureka: #Eureka ·şÎñÖĞĞÄÏà¹ØÅäÖÃ
+eureka: #Eureka æœåŠ¡ä¸­å¿ƒç›¸å…³é…ç½®
   instance:
     hostname: localhost
-    lease-renewal-interval-in-seconds: 20 # ÉèÖÃĞÄÌøµÄÊ±¼ä¼ä¸ô£¨Ä¬ÈÏÊÇ30Ãë£©
-    lease-expiration-duration-in-seconds: 30 # Èç¹ûÏÖÔÚ³¬¹ıÁË5ÃëµÄ¼ä¸ô£¨Ä¬ÈÏÊÇ90Ãë£©
+    lease-renewal-interval-in-seconds: 20 # è®¾ç½®å¿ƒè·³çš„æ—¶é—´é—´éš”ï¼ˆé»˜è®¤æ˜¯30ç§’ï¼‰
+    lease-expiration-duration-in-seconds: 30 # å¦‚æœç°åœ¨è¶…è¿‡äº†5ç§’çš„é—´éš”ï¼ˆé»˜è®¤æ˜¯90ç§’ï¼‰
   client:
-    register-with-eureka: true #ÊÇ·ñ½«eureka×ÔÉí×÷ÎªÓ¦ÓÃ×¢²áµ½eureka×¢²áÖĞĞÄ
-    fetch-registry: true #ÊÇ·ñ°Ñ×Ô¼º×÷Îª·şÎñ×¢²áµ½ÆäËû·şÎñ×¢²áÖĞĞÄ
+    register-with-eureka: true #æ˜¯å¦å°†eurekaè‡ªèº«ä½œä¸ºåº”ç”¨æ³¨å†Œåˆ°eurekaæ³¨å†Œä¸­å¿ƒ
+    fetch-registry: true #æ˜¯å¦æŠŠè‡ªå·±ä½œä¸ºæœåŠ¡æ³¨å†Œåˆ°å…¶ä»–æœåŠ¡æ³¨å†Œä¸­å¿ƒ
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8000/eureka/  #Ö¸Ïò×¢²áÖĞĞÄÅäÖÃÂ·¾¶
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka/  #æŒ‡å‘æ³¨å†Œä¸­å¿ƒé…ç½®è·¯å¾„
+mybatis-plus:
+  type-handlers-package: com.example.spring.cloud.client.mapper.mapping #æ‰«ææ˜ å°„æ–‡ä»¶
+  type-aliases-super-type: com.example.spring.cloud.client.entity #æŒ‡å®šåˆ«å
