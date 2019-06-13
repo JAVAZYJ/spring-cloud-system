@@ -2,7 +2,7 @@ package com.example.spring.cloud.client.controller;
 
 import com.example.spring.cloud.client.entity.User;
 import com.example.spring.cloud.client.service.UserService;
-import com.example.spring.cloud.client.util.DCResponse;
+import com.example.spring.cloud.client.response.DCResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;

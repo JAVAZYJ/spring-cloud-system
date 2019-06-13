@@ -1,4 +1,4 @@
-package com.example.spring.cloud.client.util;
+package com.example.spring.cloud.client.response;
 
 /**
  * 返回前端工具类
