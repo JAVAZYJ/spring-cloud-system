@@ -79,11 +79,8 @@ public class CodeGenerateTest {
             GlobalConfig gc = new GlobalConfig();
             gc.setOutputDir(generateParams.getOutputDirectory());
             gc.setFileOverride(true);
-            // 不需要ActiveRecord特性的请改为false
             gc.setActiveRecord(false);
-            // XML ResultMap
             gc.setBaseResultMap(true);
-            // XML columList
             gc.setBaseColumnList(true);
             gc.setEnableCache(false);
             gc.setOpen(false);
