@@ -23,6 +23,7 @@ eureka: #Eureka 服务中心相关配置
     fetch-registry: true #是否把自己作为服务注册到其他服务注册中心
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8000/eureka/  #指向注册中心配置路径
+
 mybatis-plus:
   type-handlers-package: com.example.spring.cloud.client.mapper.mapping #扫描映射文件
   type-aliases-super-type: com.example.spring.cloud.client.entity #指定别名
