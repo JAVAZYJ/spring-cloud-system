@@ -1,8 +1,6 @@
 package com.example.spring.cloud.gateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
 import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,14 +48,7 @@ public class TokenFilter extends ZuulFilter {
      */
     @Override
     public Object run() {
-        RequestContext ctx = RequestContext.getCurrentContext();
-        HttpServletRequest request = ctx.getRequest();
-        String token = request.getParameter("token");
-        if (token == null || token.isEmpty()) {
-            ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
-            ctx.setResponseBody("token is empty");
-        }
+
         return null;
     }
 }
